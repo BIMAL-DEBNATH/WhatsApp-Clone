@@ -27,6 +27,7 @@ class ChatMessage extends StatelessWidget {
             child: Text('No messages found..'),
           );
         }
+        
         if (snapshot.hasError) {
           return const Center(
             child: Text('Something went wrong..'),

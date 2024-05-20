@@ -6,12 +6,18 @@ import 'package:chatsapp/screen/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
+import 'second_firebase/firebase_options.dart' as second;
 
 void main() async {
   //These three line firebase
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
+  );
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    name: 'Second',
+    options: second.DefaultFirebaseOptions.currentPlatform,
   );
   runApp(const App());
 }

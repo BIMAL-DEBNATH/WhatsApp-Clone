@@ -1,7 +1,6 @@
 import 'package:chatsapp/widget/user_image_picker.dart';
 import 'package:flutter/material.dart';
-
-import 'dart:io';
+import 'dart:io'; //File
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -45,7 +44,7 @@ class _AuthState extends State<AuthScreen> {
         final userCredentials = await _firebase.createUserWithEmailAndPassword(
           email: _enteredEmail,
           password: _enteredPassword,
-        );
+        ); 
         final storageRef = FirebaseStorage.instance
             .ref()
             .child('user_images')

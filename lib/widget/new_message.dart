@@ -34,7 +34,7 @@ class _NewMessageState extends State<NewMessage> {
         .get();
 
     FirebaseFirestore.instance.collection('chat').add({
-      //add will gen.auto uid
+      //add will gen.auto uid by firebase instead doc.
       'text': enteredmessage,
       'createdAt': Timestamp.now(),
       'userId': user.uid,
